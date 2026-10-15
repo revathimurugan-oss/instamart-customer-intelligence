@@ -1,0 +1,27 @@
+INSTAMART CUSTOMER INTELLIGENCE — PART A EDA
+================================================
+Customers: 1200
+Products: 40
+Orders: 12309
+Completed orders: 11110
+Cancelled orders: 1199
+Cancellation rate: 9.74%
+
+Missing values in cleaned orders:
+order_id               0
+customer_id            0
+product_id             0
+quantity               0
+order_ts               0
+status                 0
+discount_pct           0
+order_amount         112
+delivery_minutes    1973
+
+Revenue by category (completed orders):
+category
+Electronics      1207357.30
+Grocery           606801.75
+Dairy             528280.45
+Snacks            458521.70
+Personal Care     167660.95

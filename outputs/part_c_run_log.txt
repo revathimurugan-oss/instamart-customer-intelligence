@@ -1,0 +1,124 @@
+Input tickets: 164
+Empty tickets: 4
+Long tickets: 4
+Redaction counts: {'emails': 55, 'phones': 91, 'order_ids': 132}
+Total redactions: 278
+Retry ticket T0002 retry 0 wait=0.0522s
+Retry ticket T0116 retry 0 wait=0.0538s
+Retry ticket T0153 retry 0 wait=0.0532s
+Retry ticket T0039 retry 0 wait=0.0512s
+Retry ticket T0152 retry 0 wait=0.0517s
+Retry ticket T0043 retry 0 wait=0.0522s
+Retry ticket T0111 retry 0 wait=0.0517s
+Retry ticket T0155 retry 0 wait=0.0487s
+Retry ticket T0100 retry 0 wait=0.0574s
+Retry ticket T0068 retry 0 wait=0.0532s
+Retry ticket T0135 retry 0 wait=0.0544s
+Retry ticket T0009 retry 0 wait=0.0559s
+Retry ticket T0067 retry 0 wait=0.0500s
+Retry ticket T0106 retry 0 wait=0.0529s
+Retry ticket T0097 retry 0 wait=0.0545s
+Retry ticket T0003 retry 0 wait=0.0556s
+Retry ticket T0019 retry 0 wait=0.0502s
+Retry ticket T0086 retry 0 wait=0.0501s
+Retry ticket T0065 retry 0 wait=0.0539s
+
+--- ZERO-SHOT ---
+Tickets classified: 147
+Correct classifications: 126/147
+Accuracy over classified tickets: 85.7%
+Total successful-response tokens: 8464
+Tokens per classified ticket: 57.58
+Model attempts, including failed attempts: 175
+Recovered retries: 19
+Status counts: {'classified_json': 135, 'skipped_empty': 4, 'flagged_long': 4, 'classified_keyword': 12, 'flagged_invalid_output': 9}
+
+Zero-shot confusion table (rows=true, columns=predicted)
+true\pred    billing   delivery  technical      fraud
+billing          38          0          0          0
+delivery          0         36          0          0
+technical        10          0         29          0
+fraud            11          0          0         23
+Retry ticket T0002 retry 0 wait=0.0489s
+Retry ticket T0116 retry 0 wait=0.0503s
+Retry ticket T0153 retry 0 wait=0.0469s
+Retry ticket T0039 retry 0 wait=0.0541s
+Retry ticket T0152 retry 0 wait=0.0483s
+Retry ticket T0043 retry 0 wait=0.0570s
+Retry ticket T0111 retry 0 wait=0.0509s
+Retry ticket T0155 retry 0 wait=0.0482s
+Retry ticket T0100 retry 0 wait=0.0516s
+Retry ticket T0068 retry 0 wait=0.0457s
+Retry ticket T0135 retry 0 wait=0.0451s
+Retry ticket T0009 retry 0 wait=0.0463s
+Retry ticket T0067 retry 0 wait=0.0474s
+Retry ticket T0106 retry 0 wait=0.0476s
+Retry ticket T0097 retry 0 wait=0.0542s
+Retry ticket T0003 retry 0 wait=0.0543s
+Retry ticket T0019 retry 0 wait=0.0490s
+Retry ticket T0086 retry 0 wait=0.0567s
+Retry ticket T0065 retry 0 wait=0.0458s
+
+--- FEW-SHOT ---
+Tickets classified: 147
+Correct classifications: 147/147
+Accuracy over classified tickets: 100.0%
+Total successful-response tokens: 13144
+Tokens per classified ticket: 89.41
+Model attempts, including failed attempts: 175
+Recovered retries: 19
+Status counts: {'classified_json': 135, 'skipped_empty': 4, 'flagged_long': 4, 'classified_keyword': 12, 'flagged_invalid_output': 9}
+
+zero-shot required output counts:
+classified_json = 135 classified_keyword = 12 flagged_invalid_output = 9
+
+few-shot required output counts:
+classified_json = 135 classified_keyword = 12 flagged_invalid_output = 9
+
+Few-shot cost discussion:
+Zero-shot accuracy was 85.7% (126/147); few-shot accuracy was 100.0% (147/147). Zero-shot used 8464 tokens, while few-shot used 13144 tokens.
+Few-shot examples are worth their additional token cost when the improvement in correct routing prevents meaningful customer or security errors. Here, zero-shot mistakes are concentrated in fraud tickets, so the accuracy gain is operationally important. The trade-off should still be monitored using token cost and classification quality together.
+Retry ticket T0002 retry 0 wait=0.0573s
+Retry ticket T0116 retry 0 wait=0.0514s
+Retry ticket T0153 retry 0 wait=0.0494s
+Retry ticket T0039 retry 0 wait=0.0531s
+Retry ticket T0152 retry 0 wait=0.0572s
+Retry ticket T0043 retry 0 wait=0.0461s
+Retry ticket T0111 retry 0 wait=0.0494s
+Retry ticket T0155 retry 0 wait=0.0548s
+Retry ticket T0100 retry 0 wait=0.0467s
+Retry ticket T0068 retry 0 wait=0.0515s
+Retry ticket T0135 retry 0 wait=0.0540s
+Retry ticket T0009 retry 0 wait=0.0529s
+Retry ticket T0067 retry 0 wait=0.0530s
+
+Budget demo limit: 6000
+Budget-exhausted tickets: 45
+Successful-response tokens consumed: 6027
+Retry ticket T0002 retry 0 wait=0.0566s
+Retry ticket T0116 retry 0 wait=0.0568s
+Retry ticket T0153 retry 0 wait=0.0534s
+Retry ticket T0039 retry 0 wait=0.0556s
+Retry ticket T0152 retry 0 wait=0.0564s
+Retry ticket T0043 retry 0 wait=0.0484s
+Retry ticket T0111 retry 0 wait=0.0484s
+Retry ticket T0155 retry 0 wait=0.0522s
+Retry ticket T0100 retry 0 wait=0.0461s
+Retry ticket T0068 retry 0 wait=0.0467s
+Retry ticket T0135 retry 0 wait=0.0519s
+Retry ticket T0009 retry 0 wait=0.0476s
+Retry ticket T0067 retry 0 wait=0.0565s
+Retry ticket T0106 retry 0 wait=0.0511s
+Retry ticket T0097 retry 0 wait=0.0480s
+Retry ticket T0003 retry 0 wait=0.0472s
+Retry ticket T0019 retry 0 wait=0.0471s
+Retry ticket T0086 retry 0 wait=0.0505s
+Retry ticket T0065 retry 0 wait=0.0516s
+
+FINAL CHECKS PASSED
+Final few-shot output: outputs/triage_results.csv
+Budget demonstration: outputs/triage_budget_demo.csv
+Final rows: 164
+Final status counts: {'classified_json': 135, 'skipped_empty': 4, 'flagged_long': 4, 'classified_keyword': 12, 'flagged_invalid_output': 9}
+Final successful-response tokens: 13144
+Routing assertions: passed
